@@ -2,14 +2,26 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>BRACIAK</title>
+<title>BRACIAK REPS</title>
 
 <style>
+*{box-sizing:border-box}
 body{
   margin:0;
-  background:#050505;
-  color:#fff;
   font-family:Arial,Helvetica,sans-serif;
+  background:radial-gradient(circle at top,#0f0f0f,#050505 70%);
+  color:#fff;
+  overflow:hidden;
+}
+
+/* grain */
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity:.08;
+  pointer-events:none;
 }
 
 .wrap{
@@ -17,20 +29,97 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
+  animation:fade 1.2s ease;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:none}
 }
 
 .card{
-  width:360px;
-  background:#0c0c0c;
-  border:1px solid #1f1f1f;
-  border-radius:16px;
-  padding:40px 30px;
+  width:380px;
+  background:rgba(12,12,12,.85);
+  backdrop-filter:blur(10px);
+  border:1px solid #222;
+  border-radius:20px;
+  padding:36px 28px;
   text-align:center;
+  box-shadow:0 0 40px rgba(0,0,0,.6);
+}
+
+.logo{
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#ff2f92,#6b4dff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  margin:0 auto 16px;
 }
 
 h1{
-  letter-spacing:3px;
-  font-size:32px;
-  margin-bottom
+  margin:10px 0 6px;
+  letter-spacing:4px;
+  font-size:28px;
+}
 
+p{
+  color:#aaa;
+  font-size:14px;
+  margin-bottom:26px;
+}
 
+.btn{
+  display:block;
+  margin:14px 0;
+  padding:16px;
+  border-radius:14px;
+  background:#111;
+  border:1px solid #2a2a2a;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.25s;
+}
+
+.btn:hover{
+  background:#1a1a1a;
+  transform:scale(1.04);
+}
+
+iframe{
+  width:100%;
+  height:200px;
+  border:none;
+  border-radius:14px;
+  margin-top:18px;
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <div class="logo">B</div>
+    <h1>BRACIAK</h1>
+    <p>verified reps links</p>
+
+    <a class="btn" href="https://ikako.vip/r/qu3a3" target="_blank">
+      🔗 IKAKO
+    </a>
+
+    <a class="btn" href="https://docs.google.com/spreadsheets/d/1vxZcOi6uK_4qHGKDZxjuTFXlUXiHsD1M1pP98qkRKvM" target="_blank">
+      📊 FULL SPREADSHEET
+    </a>
+
+    <!-- EMBED GOOGLE SHEET -->
+    <iframe src="https://docs.google.com/spreadsheets/d/1vxZcOi6uK_4qHGKDZxjuTFXlUXiHsD1M1pP98qkRKvM/preview"></iframe>
+
+  </div>
+</div>
+</body>
+</html>
